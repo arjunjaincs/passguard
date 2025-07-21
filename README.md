@@ -40,7 +40,7 @@ python main.py
 
 ## 🎥 Demo
 
-![PassGuard Demo](assets/demo.gif)
+![PassGuard Demo](assets/PassGuard.gif)
 
 ---
 
