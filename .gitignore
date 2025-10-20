@@ -1,7 +1,37 @@
-# ignore compiled Python files
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
 
-# keep user data private
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# PyInstaller
+build/
+dist/
+
+# Vaults (sensitive data)
 vaults/*.dat
-vaults/labels.json
+vaults/*.enc
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*~

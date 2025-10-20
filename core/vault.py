@@ -51,5 +51,23 @@ def load_vault_labels() -> dict:
     except FileNotFoundError:
         return {}
     except Exception:
-        print("[WARN] Failed to load encrypted labels. Returning empty.")
+        print("[WARN] Could not load labels.")
         return {}
+
+
+def delete_vault_label(filename: str):
+    """Delete a vault label from the labels file."""
+    try:
+        with open(LABEL_FILE, "rb") as f:
+            data = decrypt_data(LABEL_KEY, f.read())
+    except FileNotFoundError:
+        return
+    except Exception:
+        print("[WARN] Could not read labels.")
+        return
+    
+    if filename in data:
+        del data[filename]
+        encrypted = encrypt_data(LABEL_KEY, data)
+        with open(LABEL_FILE, "wb") as f:
+            f.write(encrypted)
