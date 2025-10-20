@@ -50,7 +50,7 @@
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/yourusername/passguard.git
+git clone https://github.com/arjunjaincs/passguard
 cd passguard
 ```
 
