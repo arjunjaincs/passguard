@@ -20,6 +20,14 @@ class UnlockDialog(ctk.CTk):
 
         ctk.set_appearance_mode("dark")
         ctk.set_default_color_theme("blue")
+        
+        # Set window icon
+        icon_path = os.path.join("assets", "icon.ico")
+        if os.path.exists(icon_path):
+            try:
+                self.iconbitmap(default=icon_path)
+            except Exception as e:
+                print(f"Failed to set unlock window icon: {e}")
 
         self.create_widgets()
         
